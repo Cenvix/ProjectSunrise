@@ -24,8 +24,9 @@
     
     body {
     font-family: "Roboto", sans-serif;
-    background:linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(170,216,206,.9) 100%);
+    background-color: #f2f7fc;
     background-repeat: repeat-x;
+    line-height: 1.1;
     }
     
 
@@ -98,8 +99,8 @@
 <!-- Use any element to open/show the overlay navigation menu -->
     
 <!-- Navbar -->
-<div class="w3-top">
-    <div style="position: fixed; width: 50px" >
+<div class="w3-top" style="z-index: 100;">
+    <div style="position: fixed; width: 50px; " >
         <a href="http://www.indieunfilmfestival.com"><img src="https://78.media.tumblr.com/19c70fd512b3240b75d9526b9bb707e5/tumblr_p00qm2kmq11wj0sq8o1_1280.png" style="width: 100%;"/></a>
       </div>
     
@@ -146,46 +147,27 @@
 
 <!-- Page content -->
 <div class="w3-container w3-center" style="margin-top:46px;">
-    <center>
-
-  <!-- Automatic Slideshow Images 
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/la.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    <div class="w3-container w3-row "style="margin-top:80px;margin-bottom:80px;">
+        <div class="w3-col m6 w3-left w3-center " style="margin-top:20px;height:0;width: 35vw" >
+            <div class="shapeContainer" style="width: 100%;
+    padding-top: 100%; margin-left: 20%; ">
+                <img class="shape zoom" src="https://i.imgur.com/Stu9rr2.png" style="z-index: 1; top:0%;left: 10%; width: 50%;min-width: 100px;"/>
+                <img class="shape zoom" src="https://i.imgur.com/fHkJE3R.png" style="z-index: 2; top:12%;left: 45%; width: 50%;min-width: 100px; "/>
+                <img class="shape zoom" src="https://i.imgur.com/TsuidQB.png" style="z-index: 3; top:35%;left: 20%; width: 50%;min-width: 100px; "/>
+            </div>
+            
+        </div>
+        <div class="w3-col m6 w3-right" style="text-align: justify;">
+            
+            <img src="https://i.imgur.com/ZgMBIH8.png" style="display: block; width: 70%; min-width: 300px; animation: "/>
+            
+            <div class="w3-row w3-padding-24" style="padding-left: 3%; padding-right: 3%;  font-size:2.5vh">On its fifteenth year, IUF brings you films that <b>explore new horizons</b>, bringing forth stories that break boundaries and tell refreshing tales of from talented student filmmakers.  This year, we are proud to introduce pioneer entries from our new category,<b> Pamana</b>, which aims to bring forth stories of Filipino heritage and culture. </div>
+            <img src="https://i.imgur.com/o8mgOl8.png" style="display: block; width: 45%; min-width: 250px; "/>
+            <div class="w3-row w3-padding-24" style="padding-left: 3%; padding-right: 3%;  font-size:2.5vh"><b>Indie Un-film Festival (IUF)</b> is an intercollegiate digital film festival organized by the DLSU Green Media Group. It celebrates film by showcasing the competition’s finalists and a plenary talk involving the country’s renowned filmmakers. </div>
+        </div>
+    
+    
     </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/ny.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/chicago.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
--->
-    <div class="w3-container w3-center w3-padding-64">
-        <center>
-            <div  id="perspectiveContainer" class="zoom">
-                <div  id="perspectiveInner">
-            <img src="https://78.media.tumblr.com/f8fc3a606c3da60f237efa3b0cf6e522/tumblr_p00oue6cur1wj0sq8o1_1280.png" style=" height: 40vh; min-height: 100px; width: auto;	animation: float 2s ease-in-out infinite;"/>
-                </div></div>
-        </center>
-                
-    </div>
-  <!-- The Call to action Section -->
-  <div class="w3-container w3-content w3-center">
-    <h3 class="w3-button w3-iuf-red w3-round-large" onclick="openOverlay()">CLICK HERE FOR AN ADVENTURE</h3>
-  </div>
-
-  </center>
 <!-- End Page Content -->
 </div>
 <!--
@@ -194,7 +176,8 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
 <!-- Footer -->
-<footer class="w3-container w3-center w3-margin-top">
+<footer class="w3-container w3-center w3-margin-top" style=" width: 100%; bottom: 0; position: absolute;">
+    
     <center>
         <img src="https://78.media.tumblr.com/f084ed3fcd2f94735f460c0f37aa53e4/tumblr_ozvoebwrCq1w6qdn7o1_1280.png" style="width: 20%; min-width: 100px;"/>
     </center>
@@ -208,22 +191,24 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </footer>
 <!-- End of Footer-->
 <!-- BACKGROUND SHAPES -->
-<div class="w3-row shapeBG">
+<div class="w3-row shapeBG" >
     <div class="w3-col m6 w3-left image-container" style="height: 100%">
         <div class="shapeContainer">
-            <img class="shape" src="https://i.imgur.com/cjk4krV.png" style=" left: -10%; top:-10%; animation: float3 5s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/eDwOEGW.png" style="right:30%; bottom: 10%;  animation: float3 3s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/7ARJPSw.png" style="left:30%; bottom: 40%;  animation: float 2.1s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/JeVSQ1I.png" style="right:40%; top: 25%;  animation: float3 2.1s ease-in-out infinite;"/>
+            <img class="shape" src="https://i.imgur.com/DHP5frv.png" style=" left: -20%; top:-45%; animation: floatDiagonal2 3s ease-in-out infinite;"/>
+            
+            <img class="shape" src="https://i.imgur.com/Q1uYXnN.png" style="bottom: 5%; left:5%;  animation: float 2.5s ease-in-out infinite;"/>
+            <img class="shape" src="https://i.imgur.com/XSLldLw.png" style="bottom: 20%; left:70%;  animation: float2 2.1s ease-in-out infinite;"/>
+            <img class="shape" src="https://i.imgur.com/JeVSQ1I.png" style="bottom: 25%; left:73%;  animation: float3 2.3s ease-in-out infinite;"/>
+            <img class="shape" src="https://i.imgur.com/s2ULJYw.png" style="top: 10%; left:30%;  animation: float 3s ease-in-out infinite;"/>
         </div>
     </div>
     <div class="w3-col m6 w3-right" style="height: 100%">
         <div class="shapeContainer">
-            <img class="shape" src="https://i.imgur.com/xp5gNxE.png" style=" left: 50%; top:25%;  animation: float3 3s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/cjk4krV.png" style=" right: 5%; bottom:-25%; animation: float2 5.1s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/XSLldLw.png" style="left:25%; top: 30%;  animation: float2 3.5s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/5RYja93.png" style="left:35%; top: 15%;  animation: float3 3.5s ease-in-out infinite;"/>
-            <img class="shape" src="https://i.imgur.com/cjk4krV.png" style=" right: -15%; bottom:-20%; animation: float2 3.8s ease-in-out infinite;"/>
+
+            <img class="shape" src="https://i.imgur.com/JeVSQ1I.png" style="left:0%; top: 25%;  animation: float3 3.5s ease-in-out infinite;"/>
+            <img class="shape" src="https://i.imgur.com/Q1uYXnN.png" style="bottom: 15%; right:30%;  animation: float 2.5s ease-in-out infinite;"/>
+            <img class="shape" src="https://i.imgur.com/hBmDbjp.png" style="top: 15%; right:5%; transform: scale(.3);  animation: float2 2.8s ease-in-out infinite; )"/>
+            <img class="shape" src="https://i.imgur.com/DHP5frv.png" style=" right: -20%; bottom:-45%; animation: floatDiagonal1 3s ease-in-out infinite;"/>
         </div>
     </div>
     
