@@ -365,6 +365,7 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
 
     
     var featHTML ="";
+    var featNames=[];
     for(i=0; i<features.length;i++){
         if(i%4==0)
             featHTML+= "<div class='w3-row'>";
@@ -380,14 +381,27 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                                 "</div>"+
                             "</div>"+
                         "</div>"+
-                    "<h3>"+features[i].title+"</h3> </div>";
+                    "</div>";
+        
+        featNames.push(features[i].title);
+        
         if(i%4==3)
             featHTML+= "</div>";
+        
+        if(i+1==features.length || i%4==3){
+            featHTML+="<div class='w3-row'>"
+            for(j=0;j<featNames.length;j++){
+                featHTML+="<div class='w3-content w3-col m3 w3-padding'><h3>"+featNames[j]+"</h3></div>"; 
+            }
+            featHTML+="</div>"
+            featNames=[];
+        }
     }
     
     $("#feature-row").html(featHTML);
     
     var docHTML ="";
+    var docNames=[];
     for(i=0; i<documentaries.length;i++){
         if(i%4==0)
             docHTML+= "<div class='w3-row'>";
@@ -403,14 +417,28 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                                 "</div>"+
                             "</div>"+
                         "</div>"+
-                    "<h3>"+documentaries[i].title+"</h3> </div>";
+                    "</div>";
+        docNames.push(documentaries[i].title);
+        
         if(i%4==3)
             docHTML+= "</div>";
+        
+        if(i+1==documentaries.length || i%4==3){
+            docHTML+="<div class='w3-row'>"
+            for(j=0;j<docNames.length;j++){
+                docHTML+="<div class='w3-content w3-col m3 w3-padding'><h3>"+docNames[j]+"</h3></div>"; 
+            }
+            docHTML+="</div>"
+            docNames=[];
+        }
+        
+        
     }
     
     $("#documentary-row").html(docHTML);
     
     var expHTML ="";
+    var expNames=[];
     for(i=0; i<experimentals.length;i++){
         if(i%4==0)
             expHTML+= "<div class='w3-row'>";
@@ -426,14 +454,27 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                                 "</div>"+
                             "</div>"+
                         "</div>"+
-                    "<h3>"+experimentals[i].title+"</h3> </div>";
+                    "</div>";
+        
+        expNames.push(experimentals[i].title);
+        
         if(i%4==3)
             expHTML+= "</div>";
+        
+        if(i+1==experimentals.length || i%4==3){
+            expHTML+="<div class='w3-row'>"
+            for(j=0;j<expNames.length;j++){
+                expHTML+="<div class='w3-content w3-col m3 w3-padding'><h3>"+expNames[j]+"</h3></div>"; 
+            }
+            expHTML+="</div>"
+            expNames = [];
+        }
     }
     
     $("#experimental-row").html(expHTML);
     
     var mvHTML ="";
+    var mvNames = [];
     for(i=0; i<musicvideos.length;i++){
         if(i%4==0)
             mvHTML+= "<div class='w3-row'>";
@@ -449,14 +490,27 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                                 "</div>"+
                             "</div>"+
                         "</div>"+
-                    "<h3>"+musicvideos[i].title+"</h3> </div>";
+                    "</div>";
+        
+        mvNames.push(musicvideos[i].title);
+        
         if(i%4==3)
             mvHTML+= "</div>";
+        
+        if(i+1==musicvideos.length || i%4==3){
+            mvHTML+="<div class='w3-row'>"
+            for(j=0;j<mvNames.length;j++){
+                mvHTML+="<div class='w3-content w3-col m3 w3-padding'><h3>"+mvNames[j]+"</h3></div>"; 
+            }
+            mvHTML+="</div>"
+            mvNames = [];
+        }
     }
     
     $("#musicvideo-row").html(mvHTML);
     
     var pamHTML ="";
+    var pamNames = [];
     for(i=0; i<pamanas.length;i++){
         if(i%4==0)
             pamHTML+= "<div class='w3-row'>";
@@ -472,9 +526,21 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                                 "</div>"+
                             "</div>"+
                         "</div>"+
-                    "<h3>"+pamanas[i].title+"</h3> </div>";
+                    "</div>";
+        
+        pamNames.push(pamanas[i].title);
+        
         if(i%4==3)
             pamHTML+= "</div>";
+        
+        if(i+1==pamanas.length || i%4==3){
+            pamHTML+="<div class='w3-row'>"
+            for(j=0;j<pamNames.length;j++){
+                pamHTML+="<div class='w3-content w3-col m3 w3-padding'><h3>"+pamNames[j]+"</h3></div>"; 
+            }
+            pamHTML+="</div>"
+            pamNames = [];
+        }
     }
     
     $("#pamana-row").html(pamHTML);
