@@ -1,4 +1,4 @@
-   .loader {
+.loader {
      position: fixed;
      left: 0px;
      top: 0px;
@@ -190,10 +190,16 @@
   opacity: 0;
   transition: .5s ease;
   background: linear-gradient(to top, #ee886f 0%,#ffe892 100%);
+
+}
+
+
+
+.underlay{
+    transition: .5s ease;
 }
 
 .textOverlayText {
-  color: #09060a;
   font-size: 1vw;
   position: absolute;
   top: 50%;
@@ -206,8 +212,14 @@
 
 .overlayContainer {
   position: relative;
+    
 }
-
 .overlayContainer:hover .textOverlay {
   opacity: 1;
 }
+
+.overlayContainer:hover .underlay {
+  opacity: 0;
+}
+
+
