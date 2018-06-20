@@ -114,8 +114,8 @@
           <a href="/awarding" class="w3-bar-item w3-button">AWARDING</a>
       </div>
     </div>
-    <a href="/finalists" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-focus">FINALISTS</a>
-    <a href="/judges" class="w3-bar-item w3-button w3-padding-large w3-hide-small">JUDGES</a>
+    <a href="/finalists" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FINALISTS</a>
+    <a href="/judges" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-focus">JUDGES</a>
     <a href="/sponsors" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SPONSORS</a>
       <a href="/faqs" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQs</a>
     <a class="w3-bar-item w3-right w3-hide-small w3-button w3-iuf-red w3-round-large" style="font-weight: 700; margin-top: 4px; margin-right: 10px">GET TICKETS</a>
@@ -143,13 +143,13 @@
 <!-- Page content -->
 <div class="w3-container w3-center" style="margin-top:46px; margin-bottom: 100px;">
     <div class="w3-container w3-row "style="margin-top:80px">
-        <h1 style="font-size: 75px">FINALISTS</h1>
+        <h1 style="font-size: 75px">JUDGES</h1>
     </div>
     <div class="w3-container w3-row " style="margin-left: 10%;margin-right: 10%;" >
         <div class=" w3-row w3-left"  >
             <h1>  
                 FEATURE
-                <a href="#" class="w3-button w3-medium w3-iuf-red w3-round-medium" style="font-weight: 700;">Watch Trailers</a>
+                
             </h1>
         </div>
         <div class=" w3-row" id="feature-row" >
@@ -158,7 +158,7 @@
         <div class=" w3-row w3-left"  >
             <h1>  
                 DOCUMENTARY
-                <a href="#" class="w3-button w3-medium w3-iuf-red w3-round-medium" style="font-weight: 700;">Watch Trailers</a>
+                
             </h1>
         </div>
         <div class=" w3-row" id="documentary-row" >
@@ -167,7 +167,7 @@
         <div class=" w3-row w3-left"  >
             <h1>  
                 EXPERIMENTAL
-                <a href="#" class="w3-button w3-medium w3-iuf-red w3-round-medium" style="font-weight: 700;">Watch Trailers</a>
+               
             </h1>
         </div>
         <div class=" w3-row" id="experimental-row" >
@@ -176,7 +176,7 @@
         <div class=" w3-row w3-left"  >
             <h1>  
                 MUSIC VIDEO
-                <a href="#" class="w3-button w3-medium w3-iuf-red w3-round-medium" style="font-weight: 700;">Watch Trailers</a>
+         
             </h1>
         </div>
         <div class=" w3-row" id="musicvideo-row" >
@@ -185,7 +185,7 @@
         <div class=" w3-row w3-left"  >
             <h1>  
                 PAMANA
-                <a href="#" class="w3-button w3-medium w3-iuf-red w3-round-medium" style="font-weight: 700;">Watch Trailers</a>
+          
             </h1>
         </div>
         <div class=" w3-row" id="pamana-row" >
@@ -289,9 +289,9 @@ function closeOverlay() {
 </script>
 
 <script>
-    class Film{
-                 constructor(title, desc,poster){
-                     this.title = title;
+    class Judge{
+                 constructor(name, desc,poster){
+                     this.name = name;
                      this.desc = desc;
                      this.poster = "https://drive.google.com/uc?id="+poster;
                      //this.poster = poster;
@@ -305,62 +305,7 @@ function closeOverlay() {
     var pamanas = [];
 
 
-features.push(new Film("Ang Lalaking May Regla sa Gitna ng Dagat","A fishing community faces an impending demolition. One of the fisherfolks is Mon, a teenage boy, who had a menstruation in the middle of fishing.","1EhzERUA_gnafabSracxI5Ce9wTrbbu4e"));
 
-features.push(new Film("Bago","A young father gets acquainted with loss.","1B-3TyQXm4olHRD8fJXVT5yCctLFnain5"));
-
-features.push(new Film("Binihag","A hitman finds his way to redemption as he interrogates their captive.","1mytPv2ckhPOqg3Fa89wm8RhIV3Fn6uE5"));
-
-features.push(new Film("Dama","A father figure adopts a stray child to cope with the death of his son in a crisis-ridden Philippines.","1JvUJQDDM-MMbTSRWyeVeHzOsYNaNsLP8"));
-
-features.push(new Film("Heist School","A ragtag group of students try to steal from the faculty room as they save both their grades and friendship.","1Yovo_B6LM1LSZy-2n74VRGVY2nv4_Wcb"));
-
-features.push(new Film("Johnny Whispers","Long-time friends Johnny Ong and Joel Reyes, led a team of investigative journalists to a war-zone. However, things took a tragic turn and only Joel survives. As he goes back to his wife in Manila, the ghost of Johnny follows him.","1iIM5rCjWGeVhrUbcgmqHGGBUK8-ohJhc"));
-
-features.push(new Film("Kasama ng Paglisan ang Pag-alala at Paglimot","A mother and a daughter prepare for the burial of a dominant figure in their lives while struggling to move on from their memories with him. This is a story about pain – pain in remembering and pain in wanting to forget.","1uhA31qKDTNzEnbsBdmah89EjhIdBhjRE"));
-
-features.push(new Film("Langit, Lupa, Im Im","A suicidal girl who is mentally and emotionally tortured of her situation wants to put her life to an end alongside her suicidal partner.","1gGlVD9d2sUbPrJcdQMcvccBsLwWNNn7d"));
-
-features.push(new Film("Lukob","A boy inside a medical facility begins to question the nature of his existence when his best friend’s body starts to degenerate.","11oQUP9hs6d8Aa7KVVXrh8Y8L3furCRfI"));
-
-features.push(new Film("Sa Pag-agos ng Panahon","A 25 year old lesbian, comes to terms with her traditional Filipino father.","1veF2MvxWvyI3xYVrJVjlJKZJ7SdyoLRF"));
-
-
-//DOCUMENTARY
-documentaries.push(new Film("Dory","A 101-year-old transwoman walks around the streets of Tondo, Manila.","1qFfmQQ0tJU-6dSLQZe6HfIQ9B_pPcSxc"));
-
-documentaries.push(new Film("Katong Gabii","The documentary follows two survivors of the 2016 bombing in Davao city, Philippines, a year after the traumatizing incident during President Rodrigo Duterte’s regime.","1ZwwIkQ0HY53I3WBi3vqRl4l_t4YnQeUB"));
-
-documentaries.push(new Film("Si Baste","A documentary centered on the 127-year old all-steel Basilica of San Sebastian. It tackles the history of the storied church, its cultural relevance, the value of art.","1vPuSZO38BnMRLU-21HV8kmMacd1tQLEH"));
-
-documentaries.push(new Film("Takip Sining","Isang dokumentaryo tungkol sa mga pagsubok ng mga Persons Deprived of Liberty na nag babagong buhay sa pamamagitan ng sining na pagpipinta.","12oGwtp2JmF8BAI6nS8OC5NV2sjoLnhb_"));
-    
-documentaries.push(new Film("Unscathe","Unscathed is a story of resilience of the victims of the recent Pasil Fire. This documentary film emphasizes the lives of the people in Pasil through the lens of three young Sinulog sa Barangayan dancers, who themselves are also victims.","1yl38HOxkvDcQz1YEwRjZAlWZmLJkk2Oh"));
-
-
-//EXPERIMENTAL
-experimentals.push(new Film("Ang Lisyang Edukasyon ng Pilipino","An experimental film that presents the miseducation of the Filipino people due to the American colonization that still has great influence in the current time.","1qboRdM7eoh8AxDhcf5J-ex9eaHNOYHOd"));
-
-experimentals.push(new Film("Essense","Abstracted parts of the human body, in its most bare essence.","14TqXeCQi5pbn8k41R-1oAGairVAORuCR"));
-
-experimentals.push(new Film("Liyag","Liyag is a visual record of Friedrich Nietzsche's quote, \"There is always some madness in love. But there is also always some reason in madness\".","1VXfWzi7sH6msHMLaytfJljWP61engMeE"));
-
-
-//MUSIC VIDEO
-musicvideos.push(new Film("A Place Somewhere","Guy wakes up from a bad dream, but little did he know that his reality is even worse than his nightmares. Upon realizing this, he wills himself to go back to sleep.","1A3zQL8D7R_nbAyIzK9jfnRduCYEFNVcg"));
-
-musicvideos.push(new Film("Ghost","A girl is haunted by the ghost of a relationship now past; only to realize that she has to face another demon outside of her failed romance: herself.","1IMXPHhpeBpSiQAgqo9-sIWhphwtlu0Fn"));
-
-musicvideos.push(new Film("Hilom","A video that portrays the intimate process of separation and its aftermath. A moving picture of poignancy.","10aApdpDV_2-15et3YHCzFbyTh_Hbk4_9"));
-
-
-
-//PAMANA
-pamanas.push(new Film("Al Basir","There's more to war that was fought and blood that was spilled. And if you thought you’ve seen everything, the threads of lies are yet to be unleashed.","1fD9TNVCZYfK4XYCr1yQtZl8yb22RFyJS"));
-
-pamanas.push(new Film("Sa Gabing Tanging Liwanag ay Paniniwala","A father who left his house and family to search for a missing girl found himself lost in the woods. Upon coming home, to his surprise, someone else was there. He looks exactly like him.","13Mo9f9qCKGZPxZFms98UwVLRvxoMjuG7"));
-
-pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon ay buhay na buhay sa puso at isip ng ating mga kabataan ngayon.","1HhBaD_4gJL1iDwo5-sEDj1EzHqrrg-4U"));
 
 
 
@@ -385,7 +330,7 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                         "</div>"+
                     "</div>";
         
-        featNames.push(features[i].title);
+        featNames.push(features[i].name);
         
         if(i%4==3)
             featHTML+= "</div>";
@@ -420,7 +365,7 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                             "</div>"+
                         "</div>"+
                     "</div>";
-        docNames.push(documentaries[i].title);
+        docNames.push(documentaries[i].name);
         
         if(i%4==3)
             docHTML+= "</div>";
@@ -458,7 +403,7 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                         "</div>"+
                     "</div>";
         
-        expNames.push(experimentals[i].title);
+        expNames.push(experimentals[i].name);
         
         if(i%4==3)
             expHTML+= "</div>";
@@ -494,7 +439,7 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                         "</div>"+
                     "</div>";
         
-        mvNames.push(musicvideos[i].title);
+        mvNames.push(musicvideos[i].name);
         
         if(i%4==3)
             mvHTML+= "</div>";
@@ -530,7 +475,7 @@ pamanas.push(new Film("Yano","Ang kabayanihang taglay ng ating mga bayani noon a
                         "</div>"+
                     "</div>";
         
-        pamNames.push(pamanas[i].title);
+        pamNames.push(pamanas[i].name);
         
         if(i%4==3)
             pamHTML+= "</div>";

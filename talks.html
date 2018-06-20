@@ -41,7 +41,7 @@
     
     iframe {display:none !important;}
     
-    iframe.video {display:block !important; height: 50%;}
+    iframe.video, iframe.map{display:block !important; height: 50%;}
     
     h1{
       font-family: "Roboto", sans-serif;
@@ -84,17 +84,7 @@
 <body>
 <div class="loader"></div>
     
-<div id="videoOverlay" class="overlay">
 
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-      <iframe id="video" class="video" mozallowfullscreen webkitallowfullscreen allowfullscreen allowFullScreen frameborder="0" mozallowfullscreen src="https://player.vimeo.com/video/256367060" webkitAllowFullScreen width="100%"></iframe>
-  </div>
-
-</div>
 
 <!-- Use any element to open/show the overlay navigation menu -->
     
@@ -114,7 +104,7 @@
       <button class="w3-padding-large w3-button w3-focus" title="More">EVENTS <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-iuf-yellow">
         <a href="/calendar" class="w3-bar-item w3-button">CALENDAR</a>
-        <a href="/talks" class="w3-bar-item w3-button">TALKS</a>
+        <a href="/talks" class="w3-bar-item w3-button w3-focus">TALKS</a>
         <a href="/screenings" class="w3-bar-item w3-button">SCREENINGS</a>
           <a href="/awarding" class="w3-bar-item w3-button">AWARDING</a>
       </div>
@@ -146,48 +136,103 @@
 </div>
 
 <!-- Page content -->
-<div class="w3-container w3-center" style="margin-top:100px;">
+<div class="w3-container w3-center" style="margin-top:46px;">
+    <div class="w3-container w3-row "style="margin-top:80px;margin-bottom:80px;">
 
-    <div class="w3-row w3-margin-top">
-        <center>
-            <img  src="https://i.imgur.com/Wqy1hLv.png" style="height:auto; width:50%">
-        </center>
+        <div class="w3-col m5 w3-left w3-padding-medium" style="text-align: justify;">
+            <div class="w3-container w3-row m3 w3-large">
+                <h1>IUF TALKS</h1>
+                <p>Our festival’s plenary event provides the audience with a unique opportunity to interact with some of Philippine cinema’s best and brightest. This year, IUF Talks takes you through the day beginning with the dawn of a fresh filmmaker, and celebrating the setting of the sun with a pioneer in the field.</p>
+            </div>
+            <div class="w3-container w3-row m6">
+                <div style="float: left; margin:15px">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1930.779835843146!2d120.9922645!3d14.5671549!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c97f5b0049db%3A0x6f594d7dd96dfa9c!2sBr.Andrew+Gonzalez+Hall%2C+Taft+Ave%2C+Malate%2C+Manila%2C+1004+Metro+Manila!5e0!3m2!1sen!2sph!4v1529431891585" frameborder="0" style="border:0;height:16vw; width:16vw" allowfullscreen>
+                    </iframe>
+                </div>
+                <div style="height: 16vw; padding-top: 8vw; margin-left: 5%;margin-right: 5%">
+                    <h3>WAREHOUSE<br>EIGHT</h3>
+                    Warehouse 8-A, La Fuerza Plaza
+                    <br>2241 Chino Roces Avenue
+                    <br>Makati City 1231
+
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m7 w3-right w3-padding-medium" style="text-align: justify;">
+            
+            <div class="w3-container w3-row "  >
+                <div class=" w3-row w3-center"  >
+                    <div class=" w3-row">
+                        <div class='w3-content w3-col m4 w3-padding'>
+                            <div class='w3-card overlayContainer'>
+                                <img   src='https://drive.google.com/uc?id=1E_Fc1PNIKohzujZuD0zWPgXobwgRIYB4' style='width: 100%; display: block'/>
+                                <div class='textOverlay'> 
+                                    <div class='textOverlayText'>
+                                        Clodualdo “Doy” del Mundo Jr. is a highly respected figure in the Philippine film industry, having written Manila Sa Kuko Ng Liwanag (1975), and directed Pepot Artista (2005), Paglipad ng Anghel (2011,) and many more. 
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Clodualdo del Mundo Jr.</h3>
+                        </div>
+                        <div class='w3-content w3-col m4 w3-padding'>
+                            <div class='w3-card overlayContainer'>
+                                <img   src='https://drive.google.com/uc?id=1UGu4WZqm0XPZOT_T1Ktu0aOP8NwWmoQ2' style='width: 100%; display: block'/>
+                                <div class='textOverlay'> 
+                                    <div class='textOverlayText'>
+                                        Antoinette “Tonette” Jadaone is a filmmaker, writer and producer, a few of her works being That Thing Called Tadhana (2014) and teleserye On The Wings Of Love (2015).
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Antoinette Jadaone</h3>
+                        </div>
+                        <div class='w3-content w3-col m4 w3-padding'>
+                            <div class='w3-card overlayContainer'>
+                                <img   src='https://drive.google.com/uc?id=1vuDAJ5eKymnzf9MXhG912E46bo2OZGpx' style='width: 100%; display: block'/>
+                                <div class='textOverlay'> 
+                                    <div class='textOverlayText'>
+                                        Pepe Diokno is a motion picture director, producer and screenwriter. His notable films include Above The Clouds (2016) and Kapatiran (2015). 
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Pepe Diokno</h3>
+                        </div>
+                    </div>
+                    <div class=" w3-row">
+                        <div class='w3-content w3-col m2 w3-padding'>
+                        </div>
+                        <div class='w3-content w3-col m4 w3-padding'>
+                            <div class='w3-card overlayContainer'>
+                                <img   src='https://drive.google.com/uc?id=1E_Fc1PNIKohzujZuD0zWPgXobwgRIYB4' style='width: 100%; display: block'/>
+                                <div class='textOverlay'> 
+                                    <div class='textOverlayText'>
+                                        Ice Idanan graduated from film and audio-visual communications in the University of the Philippines as a cum laude. She has been recognized locally and internationally for her work such as Limang Libo (2009) and Sakaling Hindi Makarating (2016).
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Ice Idanan</h3>
+                        </div>
+                        <div class='w3-content w3-col m4 w3-padding'>
+                            <div class='w3-card overlayContainer'>
+                                <img   src='https://drive.google.com/uc?id=1UGu4WZqm0XPZOT_T1Ktu0aOP8NwWmoQ2' style='width: 100%; display: block'/>
+                                <div class='textOverlay'> 
+                                    <div class='textOverlayText'>
+                                        At only 17, Jared Joven has proven his skill in filmmaking by winning an award for best film at the Shanghai Queer Film Festival last 2016 together with his co-director Kaj Palanca for their film entitled Contestant #4.
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Jared Joven</h3>
+                        </div>
+                        <div class='w3-content w3-col m2 w3-padding'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
     </div>
-    <div style="margin-top: 5%;">    <div class="w3-row w3-margin-top">
-        <div class="w3-row w3-margin-top w3-center" style="margin-left: 10%; margin-right: 10%;">
-            <img src="https://i.imgur.com/ZvhLvxG.png">
-        </div> 
-    </div>
-    <div class="w3-row w3-margin-top" style="margin-left: 10%; margin-right: 10%;">
-        <div class="w3-col m3 w3-padding">
-            <img src="https://i.imgur.com/NJfMpiE.png" style="width:75%; height: auto">
-            <h2>
-                IUF Talks
-            </h2>
-        </div>
-        <div class="w3-col m3 w3-padding">
-            <img src="https://i.imgur.com/xDm4nIS.png" style="width:75%; height: auto">
-            <h2>
-                Screening A
-            </h2>
-        </div>        
-        <div class="w3-col m3 w3-padding">
-            <img src="https://i.imgur.com/4HZnK1x.png" style="width:75%; height: auto">
-            <h2>
-                Screening B
-            </h2>
-        </div>
-        <div class="w3-col m3 w3-padding">
-            <img src="https://i.imgur.com/Cp6lnSB.png" style="width:75%; height: auto">
-            <h2>
-                Screening C
-                <br><br>
-                Awards Night
-            </h2>
-        </div>
-        </div>
-    </div>
-    <!-- End Page Content -->
+
+<!-- End Page Content -->
 </div>
 <!--
 To use this code on your website, get a free API key from Google.
@@ -195,7 +240,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
 <!-- Footer -->
-<footer class="w3-container w3-center w3-margin-top" style=" width: 100%; bottom: 0; position: absolute;">
+<footer class="w3-container w3-center w3-margin-top" style=" width: 100%; ">
     
     <center>
         <img src="https://78.media.tumblr.com/f084ed3fcd2f94735f460c0f37aa53e4/tumblr_ozvoebwrCq1w6qdn7o1_1280.png" style="width: 20%; min-width: 100px;"/>
@@ -281,87 +326,6 @@ function closeOverlay() {
 
 	
 </script>
-
-<script>
-    
-    (function() {
-  // Init
-  var container = document.getElementById("perspectiveContainer"),
-    inner = document.getElementById("perspectiveInner");
-
-  // Mouse
-  var mouse = {
-    _x: 0,
-    _y: 0,
-    x: 0,
-    y: 0,
-    updatePosition: function(event) {
-      var e = event || window.event;
-      this.x = e.clientX - this._x;
-      this.y = (e.clientY - this._y) * -1;
-    },
-    setOrigin: function(e) {
-      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-    },
-    show: function() {
-      return "(" + this.x + ", " + this.y + ")";
-    }
-  };
-
-  // Track the mouse position relative to the center of the container.
-  mouse.setOrigin(container);
-
-  //-----------------------------------------
-
-  var counter = 0;
-  var updateRate = 10;
-  var isTimeToUpdate = function() {
-    return counter++ % updateRate === 0;
-  };
-
-  //-----------------------------------------
-
-  var onMouseEnterHandler = function(event) {
-    update(event);
-  };
-
-  var onMouseLeaveHandler = function() {
-    inner.style = "";
-  };
-
-  var onMouseMoveHandler = function(event) {
-    if (isTimeToUpdate()) {
-      update(event);
-    }
-  };
-
-  //-----------------------------------------
-
-  var update = function(event) {
-    mouse.updatePosition(event);
-    updateTransformStyle(
-      (mouse.y / inner.offsetHeight / 2).toFixed(2),
-      (mouse.x / inner.offsetWidth / 2).toFixed(2)
-    );
-  };
-
-  var updateTransformStyle = function(x, y) {
-    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-    inner.style.transform = style;
-    inner.style.webkitTransform = style;
-    inner.style.mozTransform = style;
-    inner.style.msTransform = style;
-    inner.style.oTransform = style;
-  };
-
-  //-----------------------------------------
-
-  container.onmouseenter = onMouseEnterHandler;
-  container.onmouseleave = onMouseLeaveHandler;
-  container.onmousemove = onMouseMoveHandler;
-})();
-    </script>
     
     
 
