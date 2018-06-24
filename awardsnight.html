@@ -145,17 +145,17 @@
 </div>
 
 <!-- Page content -->
-<div class="w3-container" style="margin-top:200px; margin-left: 50px; margin-right: 50px;">
+<div class="w3-container" style="margin-top:100px; margin-left: 50px; margin-right: 50px;">
 
-    <div class="w3-col m6 w3-padding w3-left">
+    <div class="w3-col m6 w3-padding w3-left" >
     
-        <div class="w3-row">
-            <h1><b>Awards Night</b></h1>
+        <div class="w3-row" style="padding-left: 10%">
+            <img src="https://i.imgur.com/wQPqiE7.png" style=" width:70%">
         </div>
-        <div class="w3-row">
-            <h3>This does not mark the end of the journey, but is only a pitstop for an even bigger adventure. IUF 2018 caps off with the recognition of our finalists and a celebration of this year’s winners.</h3>
+        <div class="w3-row w3-xxlarge w3-padding-16" style="padding-left: 15%;padding-right: 15%; text-align: justify">
+            This does not mark the end of the journey, but is only a pitstop for an even bigger adventure. IUF 2018 caps off with the recognition of our finalists and a celebration of this year’s winners.
         </div>
-        <div class="w3-row" style="margin-top: 30px;">
+        <div class="w3-row" style="margin-top: 5%; padding-left: 10%">
             <div style="float: left;">
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1930.779835843146!2d120.9922645!3d14.5671549!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c97f5b0049db%3A0x6f594d7dd96dfa9c!2sBr.Andrew+Gonzalez+Hall%2C+Taft+Ave%2C+Malate%2C+Manila%2C+1004+Metro+Manila!5e0!3m2!1sen!2sph!4v1529604578234" frameborder="0" style="border:0; height:16vw; width:16vw" allowfullscreen>
                 </iframe>
@@ -168,15 +168,13 @@
     </div>
     
     
-    <div class="w3-col m6 w3-padding w3-right">
-        <div class="w3-row">
-            photo 1
+    <div class="w3-col m6 w3-left " style="height:35vw ;width: 35vw" >
+            <div class="shapeContainer" style="width: 100%; ">
+                <img class="shape zoom" src="https://i.imgur.com/KmnundS.png" style="z-index: 1; top:0%;left: 10%; width: 45%;min-width: 100px;"/>
+                <img class="shape zoom" src="https://i.imgur.com/IqXDrq8.png" style="z-index: 2; bottom:0%;right: 10%; width: 45%;min-width: 100px; "/>
+            </div>
+            
         </div>
-        
-        <div class="w3-row">
-            photo 2
-        </div>
-    </div>
     
 </div>
 <!-- End Page Content -->
@@ -186,7 +184,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
 <!-- Footer -->
-<footer class="w3-container w3-center w3-margin-top" style=" width: 100%; bottom: 0; position: absolute;">
+<footer class="w3-container w3-center w3-margin-top" style=" width: 100%;bottom: 0; position: absolute ">
     
     <center>
         <img src="https://78.media.tumblr.com/f084ed3fcd2f94735f460c0f37aa53e4/tumblr_ozvoebwrCq1w6qdn7o1_1280.png" style="width: 20%; min-width: 100px;"/>
@@ -201,7 +199,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </footer>
 <!-- End of Footer-->
 <!-- BACKGROUND SHAPES -->
-<div class="w3-row shapeBG" >
+<div class="w3-row shapeBG"  style="background:linear-gradient(to top, #ffe892f5 ,rgba(0,0,0,0) 50%);">
     <div class="w3-col m6 w3-left image-container" style="height: 100%">
         <div class="shapeContainer">
             <img class="shape" src="https://i.imgur.com/DHP5frv.png" style=" left: -20%; top:-45%; animation: floatDiagonal2 3s ease-in-out infinite;"/>
@@ -273,86 +271,6 @@ function closeOverlay() {
 	
 </script>
 
-<script>
-    
-    (function() {
-  // Init
-  var container = document.getElementById("perspectiveContainer"),
-    inner = document.getElementById("perspectiveInner");
-
-  // Mouse
-  var mouse = {
-    _x: 0,
-    _y: 0,
-    x: 0,
-    y: 0,
-    updatePosition: function(event) {
-      var e = event || window.event;
-      this.x = e.clientX - this._x;
-      this.y = (e.clientY - this._y) * -1;
-    },
-    setOrigin: function(e) {
-      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-    },
-    show: function() {
-      return "(" + this.x + ", " + this.y + ")";
-    }
-  };
-
-  // Track the mouse position relative to the center of the container.
-  mouse.setOrigin(container);
-
-  //-----------------------------------------
-
-  var counter = 0;
-  var updateRate = 10;
-  var isTimeToUpdate = function() {
-    return counter++ % updateRate === 0;
-  };
-
-  //-----------------------------------------
-
-  var onMouseEnterHandler = function(event) {
-    update(event);
-  };
-
-  var onMouseLeaveHandler = function() {
-    inner.style = "";
-  };
-
-  var onMouseMoveHandler = function(event) {
-    if (isTimeToUpdate()) {
-      update(event);
-    }
-  };
-
-  //-----------------------------------------
-
-  var update = function(event) {
-    mouse.updatePosition(event);
-    updateTransformStyle(
-      (mouse.y / inner.offsetHeight / 2).toFixed(2),
-      (mouse.x / inner.offsetWidth / 2).toFixed(2)
-    );
-  };
-
-  var updateTransformStyle = function(x, y) {
-    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-    inner.style.transform = style;
-    inner.style.webkitTransform = style;
-    inner.style.mozTransform = style;
-    inner.style.msTransform = style;
-    inner.style.oTransform = style;
-  };
-
-  //-----------------------------------------
-
-  container.onmouseenter = onMouseEnterHandler;
-  container.onmouseleave = onMouseLeaveHandler;
-  container.onmousemove = onMouseMoveHandler;
-})();
-    </script>
     
     
 
