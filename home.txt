@@ -123,7 +123,7 @@
         <a href="#" class="w3-bar-item w3-button">CALENDAR</a>
         <a href="#" class="w3-bar-item w3-button">TALKS</a>
         <a href="#" class="w3-bar-item w3-button">SCREENINGS</a>
-          <a href="#" class="w3-bar-item w3-button">AWARDING</a>
+          <a href="#" class="w3-bar-item w3-button">AWARDS NIGHT</a>
       </div>
     </div>
     <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FINALIST</a>
