@@ -69,7 +69,16 @@
         color: #f2f7fc !important;
     }
     
+    .textOverlay{
+        background: none;
+    }
     
+    .textOverlayText{
+        padding-top: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
     
 </style>
     
@@ -118,7 +127,7 @@
     <a href="/judges" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-focus">JUDGES</a>
     <a href="/sponsors" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SPONSORS</a>
       <a href="/faqs" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQs</a>
-    <a class="w3-bar-item w3-right w3-hide-small w3-button w3-iuf-red w3-round-large" style="font-weight: 700; margin-top: 4px; margin-right: 10px">GET TICKETS</a>
+    <a class="w3-bar-item w3-right w3-hide-small w3-button w3-iuf-red w3-round-large" style="font-weight: 700; margin-top: 4px; margin-right: 10px" href="/tickets">GET TICKETS</a>
 
   </div>
 </div>
@@ -137,13 +146,13 @@
     <a href="/judges" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">JUDGES</a>
     <a href="/sponsors" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SPONSORS</a>
     <a href="/faqs" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQs</a>
-    <a href="#" class="w3-bar-item w3-button w3-iuf-red w3-round-large" style="font-weight: 700; margin-top: 4px; margin-right: 10px">GET TICKETS</a>
+    <a href="#" class="w3-bar-item w3-button w3-iuf-red w3-round-large" style="font-weight: 700; margin-top: 4px; margin-right: 10px" href="/tickets">GET TICKETS</a>
 </div>
 
 <!-- Page content -->
 <div class="w3-container w3-center" style="margin-top:46px; margin-bottom: 100px;">
     <div class="w3-container w3-row "style="margin-top:80px">
-        <h1 style="font-size: 75px">JUDGES</h1>
+        <img src="https://i.imgur.com/r4miTaL.png" style="width: 40%" />
     </div>
     <div class="w3-container w3-row " style="margin-left: 10%;margin-right: 10%;" >
         <div class=" w3-row w3-left"  >
@@ -211,7 +220,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </footer>
 <!-- End of Footer-->
 <!-- BACKGROUND SHAPES -->
-<div class="w3-row shapeBG" >
+<div class="w3-row shapeBG" style="background:linear-gradient(to bottom, #ffe892 0%,#ee886f 100%);">
     <div class="w3-col m6 w3-left image-container" style="height: 100%">
         <div class="shapeContainer">
             <img class="shape" src="https://i.imgur.com/DHP5frv.png" style=" left: -20%; top:-45%; animation: floatDiagonal2 3s ease-in-out infinite;"/>
@@ -285,10 +294,12 @@ function closeOverlay() {
 
 <script>
     class Judge{
-                 constructor(name, desc,poster){
+                 constructor(name, desc,poster, sil){
                      this.name = name;
                      this.desc = desc;
                      this.poster = "https://drive.google.com/uc?id="+poster;
+                     
+                     this.sil = "https://drive.google.com/uc?id="+sil;
                      //this.poster = poster;
                  }
              }
@@ -299,6 +310,46 @@ function closeOverlay() {
     var musicvideos = [];
     var pamanas = [];
 
+
+features.push(new Judge("Edward Cabagnot","<b>Professor | Actor</b><br>Amok (2011) , Engkwentro (2009), Misteryo sa Tuwa (1984)","1w0nsuAMK3ud34HAehkNXggUea5PWDp4I","1VeVKx3mYH1wEq9Z5NRQhsvlnvck7IJkX"));
+
+features.push(new Judge("JP Habac","<b>Writer | Director</b><br>I’m Drunk, I Love You (2017), Maria (2017)","1KOfAuPbogYW2RWenCl0NHaKkOap-VjUO","1YmIBpVWgZdUwW5MxJrdUVBs4L_4V9eH7"));
+
+features.push(new Judge("Cia Hermosa Jorge","<b>Writer | Producer</b><br>Old Skool (2015), First Kiss (2011)","1WdZKdCUFYvx7ORCbW_CaXvAlGcwMXjQs","1FMcRYQSx6t7EVTx6UTo3_g6us5bfM7ye"));
+
+//DOCUMENTARY
+
+documentaries.push(new Judge("Kristoffer Brugada","<b>Independent Documentary Filmmaker<br>,Peabody Award Documentary Awardee</b>","1Eu-DWWtk4GURSwmgXhRs7Ihvb13iLWaK","1M4wVCb4BEBcT7UTwHcNxgDRAiKlKuWlT"));
+
+documentaries.push(new Judge("Baby Ruth Villarama","<b>Director | Producer</b><br>Sunday Beauty Queen (2016)","1wtKoEj1AL_tpuZCmrb2S63V0i2cN08Hy","1IqF-BTzHB93wB_iXhTfCUAOKTJawXScs"));
+
+//EXPERIMENTAL
+
+experimentals.push(new Judge("Cesar Hernando","<b>Director | Lecturer | Cinematographer</b><br>Gayuma (2015), Kalawang (1990)","1p8DhjgFqw3yQuSgo8bpgXKOKP5ZOmEyM","1f9MYHs63XcvJpoDBlIbYD3RAEU6Kq5_Q"));
+
+experimentals.push(new Judge("Jon Lazam","<b>Filmmaker | Lecturer </b><br>Tatlong Engkanto (2016)","1k-A9AMz8v7CX3N8mdqI09R3-q6edJvB7","1EggI1048EHTlggfKoxgpJx_PZ1bkDLTM"));
+
+experimentals.push(new Judge("Roque Federizon Lee","<b>Filmmaker | Animator</b><br>Juan Gapang (1987)","14UCjef4w4jJ9YyIJhR_F6Tn3hhLfokeW","16wDMANPsG4RM6JbkszZohuyLfiRiK1Ul"));
+
+//MUSIC VIDEO
+
+musicvideos.push(new Judge("Ian Galsim","<b>Director</b><br>Hong Kong Disneyland’s 10th Anniversary Video, How Do I Look Asia Season 1","1e5eDOytG_Yc0PHhkoaU4ATpy2Ey5P0MQ","1SMM2z8MD9rwt4Es-I00QVm_HMwnVy00u"));
+
+musicvideos.push(new Judge("Quark Henares","<b>Director</b><br>For Itchyworms, Sugarfree, Sandwich","1e4EfNXS8VQ40bQYwOZGZHA6CiPWugnJd","1-_s3gZYiEy1hjK-iDjg3qOaJ5oMmZ1sL"));
+
+musicvideos.push(new Judge("Avid Liongoren","<b>Director | Illustrator</b><br>For Sarah G., Yeng Constantino, Kamikazee, Parokya ni Edgar, Saving Sally","1CsTW4FuUcjGt4SFthRCftsxIJ-2mrqly","1BBICI7aFAx-anTJ1je0g46pYDwZW8VY5"));
+
+musicvideos.push(new Judge("King Palisoc","<b>Director</b><br>For Pupil, Rico Blanco, Sponge Cola","1VJIvnsea_RVqticJoDhmEvYxwkd76058","1-_s3gZYiEy1hjK-iDjg3qOaJ5oMmZ1sL"));
+
+//PAMANA
+
+pamanas.push(new Judge("Lemuel Lorca","<b>Director | Asst. Director</b><br>Mauban: Ang Resiko (2014)","1JKC2xb0QCqzB_wF8bnd_tGRHr9CW2qzn","1SYCp6-aB672a2QGRjVpCggFTwLvKtkRu"));
+
+pamanas.push(new Judge("Fatrick Tabada","<b>Screenwriter</b><br>Si Chedeng at Si Apple (2017), Patay Na Si Hesus (2016), Sabado, Sabado (2012)","1TdKiajdJaCreygyEAKBKojQ8xinBoB60","1Z7tj6w814W9oDYbcFj03eGIx2N8TKWyl"));
+
+pamanas.push(new Judge("Petersen Vargas","<b>Director | Writer</b><br>2 Cool 2 Be 4gotten (2016), Sakaling Hindi Makarating (2016)","1Gg4bUODm2vphuSzR9BC_yMVfZLu0bYNt","1XcPlqDMLlcWgwgJEhlEwpfMe35Qrpurz"));
+
+pamanas.push(new Judge("Victor Villanueva","<b>Director | Writer | Producer</b><br>Patay Na Si Hesus (2016)","1jHPAoDBJS-bubGVZN1AAAOsvZzAzvWl5","1YRa1-wlCSGJ291JWC-kZvNjoMLyJyPwl"));
 
 
 
@@ -312,8 +363,8 @@ function closeOverlay() {
         if(i%4==0)
             featHTML+= "<div class='w3-row'>";
         featHTML += "<div class='w3-content w3-col m3 w3-padding'>"+
-                        "<div class='w3-card overlayContainer'>"+
-                            "<img   src='"+
+                        "<div class=' overlayContainer'>"+
+                            "<img  class='underlay' src='"+
                             features[i].poster+
                             "' style='width: 100%; display: block'/>"+
                             
@@ -321,6 +372,7 @@ function closeOverlay() {
                                 "<div class='textOverlayText'>"+
                                     features[i].desc+
                                 "</div>"+
+                                "<img   src='"+features[i].sil+"' style='width: 100%; display: block'/>"+
                             "</div>"+
                         "</div>"+
                     "</div>";
@@ -348,8 +400,8 @@ function closeOverlay() {
         if(i%4==0)
             docHTML+= "<div class='w3-row'>";
         docHTML += "<div class='w3-content w3-col m3 w3-padding'>"+
-                        "<div class='w3-card overlayContainer'>"+
-                            "<img   src='"+
+                        "<div class=' overlayContainer'>"+
+                            "<img class='underlay'  src='"+
                             documentaries[i].poster+
                             "' style='width: 100%; display: block'/>"+
                             
@@ -357,6 +409,7 @@ function closeOverlay() {
                                 "<div class='textOverlayText'>"+
                                     documentaries[i].desc+
                                 "</div>"+
+                                "<img   src='"+documentaries[i].sil+"' style='width: 100%; display: block'/>"+
                             "</div>"+
                         "</div>"+
                     "</div>";
@@ -385,8 +438,8 @@ function closeOverlay() {
         if(i%4==0)
             expHTML+= "<div class='w3-row'>";
         expHTML += "<div class='w3-content w3-col m3 w3-padding'>"+
-                        "<div class='w3-card overlayContainer'>"+
-                            "<img   src='"+
+                        "<div class=' overlayContainer'>"+
+                            "<img class='underlay'  src='"+
                             experimentals[i].poster+
                             "' style='width: 100%; display: block'/>"+
                             
@@ -394,6 +447,7 @@ function closeOverlay() {
                                 "<div class='textOverlayText'>"+
                                     experimentals[i].desc+
                                 "</div>"+
+                                "<img   src='"+experimentals[i].sil+"' style='width: 100%; display: block'/>"+
                             "</div>"+
                         "</div>"+
                     "</div>";
@@ -421,8 +475,8 @@ function closeOverlay() {
         if(i%4==0)
             mvHTML+= "<div class='w3-row'>";
         mvHTML += "<div class='w3-content w3-col m3 w3-padding'>"+
-                        "<div class='w3-card overlayContainer'>"+
-                            "<img   src='"+
+                        "<div class=' overlayContainer'>"+
+                            "<img  class='underlay' src='"+
                             musicvideos[i].poster+
                             "' style='width: 100%; display: block'/>"+
                             
@@ -430,6 +484,7 @@ function closeOverlay() {
                                 "<div class='textOverlayText'>"+
                                     musicvideos[i].desc+
                                 "</div>"+
+                                "<img   src='"+musicvideos[i].sil+"' style='width: 100%; display: block'/>"+
                             "</div>"+
                         "</div>"+
                     "</div>";
@@ -457,8 +512,8 @@ function closeOverlay() {
         if(i%4==0)
             pamHTML+= "<div class='w3-row'>";
         pamHTML += "<div class='w3-content w3-col m3 w3-padding'>"+
-                        "<div class='w3-card overlayContainer'>"+
-                            "<img   src='"+
+                        "<div class=' overlayContainer'>"+
+                            "<img  class='underlay' src='"+
                             pamanas[i].poster+
                             "' style='width: 100%; display: block'/>"+
                             
@@ -466,6 +521,7 @@ function closeOverlay() {
                                 "<div class='textOverlayText'>"+
                                     pamanas[i].desc+
                                 "</div>"+
+                                "<img   src='"+pamanas[i].sil+"' style='width: 100%; display: block'/>"+
                             "</div>"+
                         "</div>"+
                     "</div>";
