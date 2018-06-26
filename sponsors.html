@@ -76,6 +76,68 @@
         padding: 5px;
     }
     
+    /* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background: linear-gradient(to top, #db1947ee 5%, #ee886fF5 100%); /* Black w/opacity */
+    overflow-y: hidden; /* Disable horizontal scroll */
+    opacity: 0;
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 20%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    height: 100%;
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #09060a;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color:#f2f7fc;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+    
 </style>
     
      <script type="text/javascript">
@@ -89,7 +151,20 @@
 <body>
 <div class="loader"></div>
     
+<div id="videoOverlay" class="overlay">
 
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="w3-xxlarge overlay-content w3-iuf-text-white">
+      <img class="w3-round-xxlarge" src="https://i.imgur.com/4xgC9NC.jpg" width="20%">
+      <h2>Website by</h2>
+      <h1>Martin and Vincent Productions (MVP)</h1>
+      <i class="fa fa-heart"></i>
+  </div>
+
+</div>
 
 <!-- Use any element to open/show the overlay navigation menu -->
     
@@ -146,17 +221,17 @@
         <div class="w3-row"><img src="https://i.imgur.com/gkFAaAh.png" style="width:40%"/></div>
         <div class="w3-row  w3-padding w3-xlarge" style="text-align: justify;">
             <div class="w3-col m5 w3-left">
-                <h1 class="w3-center">CO-PRESENTORS</h1>
+                <h1 class="w3-center" onclick="click3()">CO-PRESENTORS</h1>
                 <div class="w3-col m12 w3-center"><img src="https://i.imgur.com/7hckrEo.png" style="width: 50%"/></div>
             </div>
             <div class="w3-col m5 w3-right">
-                <h1 class="w3-center">MAJOR SPONSOR</h1>
+                <h1 class="w3-center" onclick="click1()">MAJOR SPONSOR</h1>
                 <div class="w3-col m12 w3-center"><img src="https://i.imgur.com/83Lbgvc.png" style="width: 50%"/></div>
             </div>
         </div>
         <div class="w3-row w3-padding" style="text-align: justify;">
             <div class="w3-col m5 w3-left">
-                <h1 class="w3-center">VENUE PARTNER</h1>
+                <h1 class="w3-center"onclick="click2()">VENUE PARTNER</h1>
                 <div class="w3-col m12 w3-center"><img src="https://i.imgur.com/LCHVGC0.png" style="width: 50%"/></div>
             </div>
             <div class="w3-col m5 w3-right">
@@ -277,23 +352,36 @@ function openOverlay() {
 function closeOverlay() {
     document.getElementById("videoOverlay").style.height = "0%";
     document.getElementById("videoOverlay").style.opacity = "0";
-    
-    var $frame = $('iframe#video');
-
-    // saves the current iframe source
-    var vidsrc = $frame.attr('src');
-
-    // sets the source to nothing, stopping the video
-    $frame.attr('src',''); 
-
-    // sets it back to the correct link so that it reloads immediately on the next window open
-    $frame.attr('src', "https://player.vimeo.com/video/256367060");
 }
+    
 
 	
 </script>
 
+<script>
 
+    var c1 = false;
+    var c2 = false;
+    
+    
+    
+    function click1(){
+        c1 = true;
+        c2 = false;
+    }
+    function click2(){
+        if(c1==true)
+            c2=true;
+    }
+    function click3(){
+        if(c1&&c2)
+            openOverlay();
+        else
+            c1=false;
+            c2=false;
+    }
+
+</script>
     
     
 
